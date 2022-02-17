@@ -1,0 +1,99 @@
+ <template>
+<lightning-card title="Get picklist values of StageName field from Opportunity " icon-name="standard:opportunity">
+ 
+    <div class="slds-m-around_medium">
+ 
+        <template if:true={OpportunityPicklist.data}>
+ 
+            <lightning-combobox name="StageName" label="Stage Name" value={StageValue}
+ 
+                options={OpportunityPicklist.data.values} onchange={handleChange}>
+ 
+            </lightning-combobox>
+ 
+        </template>        
+         
+ 
+        <template if:true={Prospecting}>
+ 
+           <div style="background:#ddd; border:1px #ccc solid; padding:10px; margin-top:10px;"> 
+            <div class="slds-page-header__name-title">
+                <h4 class="slds-page-header__title">                
+                    <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> Selected value is:- <span style="color:#ff8000; font-size:18px;">{StageValue}</span> 
+                </h4>
+            </div>
+            <br/> 
+               <p>This is default description of <strong style="color:brown">{StageValue} ..</strong></p><br/>
+               <p><a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> w3web.net</a> is the place where you can learn step-by-step about Salesforce Lightning Component, Lightning Web Component (LWC), Visualforce, JavaScript, Jquery, CSS, Configuration, Customization, Development and much <a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> more…</a></p>
+            </div>    
+        </template>
+ 
+        <template if:true={Qualification}>
+            
+            <div style="background:#ddd; border:1px #ccc solid; padding:10px; margin-top:10px;"> 
+                <div class="slds-page-header__name-title">
+                    <h4 class="slds-page-header__title">                
+                        <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> Selected value is:- <span style="color:#ff8000; font-size:18px;">{StageValue}</span> 
+                    </h4>
+                </div>
+                <br/> 
+                   <p>This is default description of <strong style="color:brown">{StageValue} ..</strong></p><br/>
+                   <p><a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> w3web.net</a> is the place where you can learn step-by-step about Salesforce Lightning Component, Lightning Web Component (LWC), Visualforce, JavaScript, Jquery, CSS, Configuration, Customization, Development and much <a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> more…</a></p>
+                </div>
+        </template>
+ 
+        <template if:true={NeedsAnalysis}>
+            <div style="background:#ddd; border:1px #ccc solid; padding:10px; margin-top:10px;"> 
+                <div class="slds-page-header__name-title">
+                    <h4 class="slds-page-header__title">                
+                        <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> Selected value is:- <span style="color:#ff8000; font-size:18px;">{StageValue}</span> 
+                    </h4>
+                </div>
+                <br/> 
+                   <p>This is default description of <strong style="color:brown">{StageValue} ..</strong></p><br/>
+                   <p><a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> w3web.net</a> is the place where you can learn step-by-step about Salesforce Lightning Component, Lightning Web Component (LWC), Visualforce, JavaScript, Jquery, CSS, Configuration, Customization, Development and much <a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> more…</a></p>
+                </div>
+        </template>
+ 
+        <template if:true={ValueProposition}>
+            <div style="background:#ddd; border:1px #ccc solid; padding:10px; margin-top:10px;"> 
+                <div class="slds-page-header__name-title">
+                    <h4 class="slds-page-header__title">                
+                        <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> Selected value is:- <span style="color:#ff8000; font-size:18px;">{StageValue}</span> 
+                    </h4>
+                </div>
+                <br/> 
+                   <p>This is default description of <strong style="color:brown">{StageValue} ..</strong></p><br/>
+                   <p><a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> w3web.net</a> is the place where you can learn step-by-step about Salesforce Lightning Component, Lightning Web Component (LWC), Visualforce, JavaScript, Jquery, CSS, Configuration, Customization, Development and much <a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> more…</a></p>
+                </div>
+        </template>
+ 
+        <template if:true={IdDecisionMakers}>
+            <div style="background:#ddd; border:1px #ccc solid; padding:10px; margin-top:10px;"> 
+                <div class="slds-page-header__name-title">
+                    <h4 class="slds-page-header__title">                
+                        <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> Selected value is:- <span style="color:#ff8000; font-size:18px;">{StageValue}</span> 
+                    </h4>
+                </div>
+                <br/> 
+                   <p>This is default description of <strong style="color:brown">{StageValue} ..</strong></p><br/>
+                   <p><a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> w3web.net</a> is the place where you can learn step-by-step about Salesforce Lightning Component, Lightning Web Component (LWC), Visualforce, JavaScript, Jquery, CSS, Configuration, Customization, Development and much <a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> more…</a></p>
+                </div>
+        </template>
+ 
+        <template if:true={PerceptionAnalysis}>
+            <div style="background:#ddd; border:1px #ccc solid; padding:10px; margin-top:10px;"> 
+                <div class="slds-page-header__name-title">
+                    <h4 class="slds-page-header__title">                
+                        <lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon> Selected value is:- <span style="color:#ff8000; font-size:18px;">{StageValue}</span> 
+                    </h4>
+                </div>
+                <br/> 
+                   <p>This is default description of <strong style="color:brown">{StageValue} ..</strong></p><br/>
+                   <p><a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> w3web.net</a> is the place where you can learn step-by-step about Salesforce Lightning Component, Lightning Web Component (LWC), Visualforce, JavaScript, Jquery, CSS, Configuration, Customization, Development and much <a href="https://www.w3web.net/" target="_blank" rel="noopener noreferrer"> more…</a></p>
+                </div>
+        </template>
+ 
+    </div>
+<br/><br/>
+</template>
